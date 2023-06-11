@@ -5,11 +5,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>ru.iq_soft</groupId>
-  <artifactId>HW_4</artifactId>
+  <artifactId>HW_5</artifactId>
   <version>1.0-SNAPSHOT</version>
-
-  <name>HW_4</name>
-  <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,23 +15,37 @@
   </properties>
 
   <dependencies>
+    <!-- Сам jUnit   -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
       <version>5.6.2</version>
       <scope>test</scope>
     </dependency>
+    <!-- Работа с параметризованными тестами в jUnit -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-params</artifactId>
       <version>5.6.2</version>
       <scope>test</scope>
     </dependency>
+    <!-- Логгер на основе slf4j и logback -->
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
       <version>1.2.3</version>
       <scope>test</scope>
+    </dependency>
+    <!-- Selenium и его менеджер браузеров -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>3.141.59</version>
+    </dependency>
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>5.0.3</version>
     </dependency>
   </dependencies>
 
@@ -44,7 +55,9 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M5</version>
         <configuration combine.children="append">
-      </configuration>
+          <!-- <excludedGroups></excludedGroups>
+          <groups>tagTest</groups>-->
+        </configuration>
       </plugin>
       <plugin>
         <artifactId>maven-failsafe-plugin</artifactId>
