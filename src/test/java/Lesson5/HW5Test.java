@@ -63,7 +63,7 @@ public class HW5Test {
         String s = driver.findElement(By.xpath("//a[@class='nav-link text-truncate pt-0']")).getText();
         assertTrue(s.equals("Iaroslav"));
 
-        logger.info("Тест-кейс №1 пройден");   // выведется только если тест не упадет и условия удовлетворят assert
+        logger.info("Тест-кейс №1 пройден");
     }
 
     @Test
